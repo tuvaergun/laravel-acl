@@ -33,9 +33,9 @@ Laravel ACL adds role based permissions to built in Auth System of Laravel 5. AC
 
 ```
 "require": {
-...
-"kodeine/laravel-acl": "~1.0@dev",
-...
+    ...
+    "kodeine/laravel-acl": "~1.0@dev",
+    ...
 },
 ```
 
@@ -44,10 +44,10 @@ Laravel ACL adds role based permissions to built in Auth System of Laravel 5. AC
 ```php
 'providers' => [
 
-'Illuminate\Foundation\Providers\ArtisanServiceProvider',
-'Illuminate\Auth\AuthServiceProvider',
-...
-'Kodeine\Acl\AclServiceProvider',
+    'Illuminate\Foundation\Providers\ArtisanServiceProvider',
+    'Illuminate\Auth\AuthServiceProvider',
+    ...
+    'Kodeine\Acl\AclServiceProvider',
 
 ],
 ```
@@ -66,8 +66,8 @@ $ php artisan vendor:publish --provider="Kodeine\Acl\AclServiceProvider"
 ```php
 protected $routeMiddleware = [
 
-....
-'acl' => 'Kodeine\Acl\Middleware\HasPermission',
+    ....
+    'acl' => 'Kodeine\Acl\Middleware\HasPermission',
 
 ];
 ```
@@ -79,7 +79,7 @@ use Kodeine\Acl\Traits\HasRole;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract
 {
-use Authenticatable, CanResetPassword, HasRole;
+    use Authenticatable, CanResetPassword, HasRole;
 }
 ```
 
