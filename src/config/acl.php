@@ -7,26 +7,47 @@ return [
     | Model Definitions
     |--------------------------------------------------------------------------
     |
-    | If you want to use your own model and extend it
-    | to package's model. You can define your model here.
+    | If you want to use your own model and extend it to
+    | package's model. You can define your model here.
     |
     */
 
-    'role' => 'Kodeine\Acl\Models\Eloquent\Role',
-    'permission' => 'Kodeine\Acl\Models\Eloquent\Permission',
+    'models' => [
+        'role' => 'Kodeine\Acl\Models\Eloquent\Role',
+        'permission' => 'Kodeine\Acl\Models\Eloquent\Permission',
+    ],
 
     /*
     |--------------------------------------------------------------------------
-    | Most Permissive Wins right
+    | Table Definitions
     |--------------------------------------------------------------------------
     |
-    | If you have multiple permission aliases assigned, each alias
-    | has a common permission, view.house => false, but one alias
-    | has it set to true. If this right is enabled, true value
-    | wins the race, ie the most permissive wins.
+    | If you want to change the name of
+    | our table you can do that here.
     |
     */
 
-    'most_permissive_wins' => false,
+    'tables' => [
+        'roles' => 'roles',
+        'role_user' => 'user_roles',
+        'permissions' => 'permissions',
+        'cache' => 'user_permissions_cache',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Permission Precedence
+    |--------------------------------------------------------------------------
+    |
+    | If you have multiple roles assigned to a user, each roles has
+    | a common permission. When we compile permissions, we need
+    | to know if Allow|Deny permissions take precedence over
+    | Deny|Allow permissions.
+    |
+    | Available Settings: "allow", "deny"
+    |
+    */
+
+    'precedence' => 'allow',
 
 ];
