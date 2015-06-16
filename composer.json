@@ -28,7 +28,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Kodeine\\Acl\\": "src/Kodeine"
+            "Kodeine\\Acl\\": "src/Acl"
         }
     }
 }
