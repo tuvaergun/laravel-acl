@@ -44,10 +44,10 @@ Laravel ACL adds role based permissions to built in Auth System of Laravel 5. AC
 ```php
 'providers' => [
 
-    'Illuminate\Foundation\Providers\ArtisanServiceProvider',
-    'Illuminate\Auth\AuthServiceProvider',
+    Illuminate\Foundation\Providers\ArtisanServiceProvider::class,
+    Illuminate\Auth\AuthServiceProvider::class,
     ...
-    'Kodeine\Acl\AclServiceProvider',
+    Kodeine\Acl\AclServiceProvider::class,
 
 ],
 ```
@@ -67,7 +67,7 @@ $ php artisan vendor:publish --provider="Kodeine\Acl\AclServiceProvider"
 protected $routeMiddleware = [
 
     ....
-    'acl' => 'Kodeine\Acl\Middleware\HasPermission',
+    'acl' => Kodeine\Acl\Middleware\HasPermission::class,
 
 ];
 ```
