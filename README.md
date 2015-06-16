@@ -25,7 +25,7 @@ Laravel ACL adds role based permissions to built in Auth System of Laravel 5. AC
 
 # <a name="requirements"></a>Requirements
 
-* This package requires PHP 5.4+
+* This package requires PHP 5.5+
 
 # <a name="getting-started"></a>Getting Started
 
@@ -34,7 +34,7 @@ Laravel ACL adds role based permissions to built in Auth System of Laravel 5. AC
 ```
 "require": {
     ...
-    "kodeine/laravel-acl": "~1.0@dev",
+    "kodeine/laravel-acl": "2.0-dev",
     ...
 },
 ```
